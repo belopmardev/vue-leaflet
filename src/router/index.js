@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Mapa from '../views/Mapa.vue'
 
 const routes = [
   {
@@ -16,7 +17,12 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
-  }
+  },
+  {
+    path: '/mapa',
+    name: 'Mapa',
+    component: Mapa
+  },
 ]
 
 const router = createRouter({
